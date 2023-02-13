@@ -1,5 +1,7 @@
 # BoF4OSCP
 
+TODO: run python3 setup.py IP PORT
+
 ## 1st step
 
 ```
