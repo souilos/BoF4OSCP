@@ -28,6 +28,8 @@ check on Immunity if EIP is well overwritten with 4B4B4B
 
 python3 findingBadchars.py
 right click on ESP, follow in dump
+
+find the badchars using the following command
 ```
 !mona compare -f c:\mona\bytearray.bin -a 005FF910(ESP ADDRESS)
 ```
