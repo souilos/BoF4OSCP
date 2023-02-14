@@ -21,7 +21,7 @@ run python3 offset.py
 
 check on mona what is the EIP address
 
-take the EIP address that looks EIP 386F...
+take the EIP address (that looks mike EIP 386F...)
 
 ## 2nd step : pattern create
 
