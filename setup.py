@@ -3,26 +3,16 @@
 import os
 import sys
 
-def replace_in_files(directory, target_ip, target_port):
-    for filename in os.listdir(directory):
-        if filename.endswith(".py"):
-            filepath = os.path.join(directory, filename)
-            with open(filepath, "r") as file:
-                contents = file.readlines()
+ip = input("Enter IP: ")
+port = input("Enter PORT: ")
 
-            with open(filepath, "w") as file:
-                for line in contents:
-                    if "sock.connect" in line or "s.connect" in line:
-                        line = line.replace("'IP'", f"'{target_ip}'")
-                    if "), PORT)" in line:
-                        line = line.replace(", PORT)", f", {target_port})")
-                    file.write(line)
+for filename in os.listdir("."):
+    if filename.endswith(".py"):
+        with open(filename, "r") as f:
+            filedata = f.read()
 
-if __name__ == "__main__":
-    if len(sys.argv) < 3:
-        print("Please provide target IP and PORT as arguments")
-        sys.exit()
-    
-    target_ip = sys.argv[1]
-    target_port = sys.argv[2]
-    replace_in_files(".", target_ip, target_port)
+        filedata = filedata.replace("IP", ip)
+        filedata = filedata.replace("PORT", port)
+
+        with open(filename, "w") as f:
+            f.write(filedata)
