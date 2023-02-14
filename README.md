@@ -1,6 +1,6 @@
 # BoF4OSCP
 
-TODO: python3 setup.py IP PORT
+TODO: python3 setup.py
 
 It's gonna edit all the python scripts with your target IP and PORT
 
