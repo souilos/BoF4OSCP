@@ -16,7 +16,11 @@ Make sure mona is installed:
 ```
 /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 3000
 
-run python3 offset.py
+```
+edit offset.py with the right pattern
+
+```
+python3 offset.py
 ```
 
 check on mona what is the EIP address
@@ -39,6 +43,8 @@ edit eipOverwrite.py with the correct offset
 check on Immunity if EIP is well overwritten with 4B4B4B
 
 ## 4th step : finding badchars
+
+edit findingBadcharw with the offset
 
 ```
 python3 findingBadchars.py
