@@ -1,6 +1,7 @@
 # BoF4OSCP
 
 TODO: python3 setup.py IP PORT
+It's gonna edit all the python scripts with your target IP and PORT
 Then follow the next steps...
 
 Make sure mona is installed:
