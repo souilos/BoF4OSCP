@@ -44,7 +44,7 @@ check on Immunity if EIP is well overwritten with 4B4B4B
 
 ## 4th step : finding badchars
 
-edit findingBadcharw with the offset
+edit findingBadchars.py with the offset
 
 ```
 python3 findingBadchars.py
